@@ -1,0 +1,71 @@
+    .count {
+		border-left: 3px solid #5ABFDB;
+		text-indent: 14px;
+		font-size: 18px;
+		color: rgba(26, 26, 26, 1)
+	}
+	.bg-purple {
+		background: #FFFFFF;
+	}
+	/* 去除input 蓝色边框/ */
+	input,button ,select,textarea{
+		outline: none;
+		text-shadow: none;
+		border: none;
+		border-radius: 4px;
+	}
+	textarea{
+		resize:none;
+	}
+	button,select{
+		cursor: pointer;
+	}
+	input{
+		/* text-indent: 1em; */
+	}
+	::-webkit-input-placeholder{
+		color: #999;
+		text-indent: 1em;
+	}    /* 使用webkit内核的浏览器 */
+:-moz-placeholder{
+	color: #999;
+	text-indent: 1em;
+}                  /* Firefox版本4-18 */
+::-moz-placeholder{
+	color: #999;
+	text-indent: 1em;
+}                  /* Firefox版本19+ */
+:-ms-input-placeholder{
+	color: #999;
+	text-indent: 1em;
+}           /* IE浏览器 */
+/*清除浮动*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+  line-height: 0;
+}
+.clearfix {
+    *zoom: 1;
+}
+img{
+	vertical-align: middle;
+}
+	
+	/* 分页 */
+	.el-pagination {
+		text-align: center;
+	}
+	.mt-10 {
+		margin-top: 10px;
+	}
+	.mt-20 {
+		margin-top: 20px;
+	}
+p,span,strong,i,div{
+	font-size: 14px;
+}

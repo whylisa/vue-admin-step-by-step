@@ -1,0 +1,16 @@
+{
+	"login":[
+		{
+			"username": "why",
+			"password": 123456
+		}
+	],
+	"table":[
+		{
+			"date": "why",
+			"name": 123456,
+			"address": "上海市虹口区"
+		}
+	]
+}
+
