@@ -65,13 +65,61 @@
 	  },
 	  methods:{
 	  	initTable() {
-	  		this.axios('/api/table').then( res => {
+//          渲染数据
+	  		this.axios('api/table').then( res => {
 	  			console.log(res.data)//查看接口返回时什么样的数据，要常用
 	  			this.tableData = res.data //接口返回的是一个数组，直接可以赋值给table
 	  		})
+
 	  	},
-	  	search() {
-	  		
+	  	search() {//测试用于绑定的查询按钮，给了一个点击事件
+	  		// 新增数据
+//	  		this.axios.post('api/table',{
+//	  			date: "2018-12-16",
+//	  			name: "why",
+//	  			address: "虹桥机场"
+//	  		}).then( res => {
+//	  			console.log(res.data)//查看接口返回时什么样的数据，要常用
+//	  			this.initTable() //重新渲染
+//	  		})
+
+
+//         删除数据
+//	  		this.axios.delete('api/table/7').then( res => {
+//	  			console.log(res.data)//查看接口返回时什么样的数据，要常用
+//	  			this.initTable() //重新渲染
+//	  		})
+
+
+//	  		this.axios.put('api/table/6',{
+////	  			name:'hah'//如果只写一条会全部修改
+//              date: 2019,
+//              name: 'hh',
+//              address:'shanghai'
+//	  		}).then( res => {
+//	  			console.log(res.data)//查看接口返回时什么样的数据，要常用
+//	  			this.initTable() //重新渲染
+//	  		})
+
+//        分页/条件查询    
+//    this.axios('api/table?_start=1&_end=5').then( res => {
+//	  			console.log(res.data)//查看接口返回时什么样的数据，要常用
+//	  			this.tableData = res.data //接口返回的是一个数组，直接可以赋值给table
+//	  			
+//	  		})
+//    
+//    this.axios('api/table?_start=1&_limit=3').then( res => {
+//	  			console.log(res.data)//查看接口返回时什么样的数据，要常用
+//	  			this.tableData = res.data //接口返回的是一个数组，直接可以赋值给table
+//	  			
+//	  		})
+
+//       降序升序
+      this.axios('api/table?_sort=1&_order=desc').then( res => {
+	  			console.log(res.data)//查看接口返回时什么样的数据，要常用
+	  			this.tableData = res.data //接口返回的是一个数组，直接可以赋值给table
+	  			
+	  		})
 	  	}
 	  }
 	}

@@ -16,14 +16,15 @@ const PORT = process.env.PORT && Number(process.env.PORT)
 // json-server
 const jsonServer = require('json-server')
 /*搭建一个server*/
-const apiServer = jsonServer.create()
+const apiJsonServer = jsonServer.create()
 /*将db.json关联到server*/
 const apiRouter = jsonServer.router('db.json')
-const middlewares = jsonServer.defaults()
-apiServer.use(middlewares)
-apiServer.use(apiRouter)
+const jsonWares = jsonServer.defaults()
+//全局使用
+apiJsonServer.use(jsonWares)
+apiJsonServer.use(apiRouter)
 /*监听端口*/
-apiServer.listen(8888, () => {
+apiJsonServer.listen(8888, () => {
   console.log('JSON Server is running')
   console.log('localhost:8888')
 })
