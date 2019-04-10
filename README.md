@@ -20,7 +20,7 @@ npm run build --report
 ```
 # Vue 项目
 
-- [项目地址 https://github.com/whylisa/vue-admin-stepbystep)
+- [项目地址 https://github.com/whylisa/vue-admin-step-by-step)
 
 ## 项目功能
 
